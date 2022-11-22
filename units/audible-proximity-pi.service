@@ -1,0 +1,12 @@
+[Unit]
+Description=Audible Proximity application by reelyActive modified by Don Undeen
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/audible-ble
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
